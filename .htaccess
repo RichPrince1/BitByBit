@@ -1,0 +1,6 @@
+
+Options +Indexes
+
+IndexOptions FancyIndexing
+
+DirectoryIndex index.html
