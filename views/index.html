@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bit Buy Bit</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="../public/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="https://use.fontawesome.com/af4090585e.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="topnav nav-wrapper indigo lighten-3">
+            <a href="#" class="brand-logo center"><i class="btc fa fa-btc fa-3x" aria-hidden="true"></i></a>
+            <ul id="nav-mobile" href="#modal1" class="right hide-on-med-and-down indigo accent-2 modal-trigger">
+                <li><a href="#modal1">Log in</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class=container>
+        <div id=circle>
+            <video loop muted autoplay="img/videoframe.jpg" class="videoInsert">
+                <source src="../public/assets/images/working-man.webm" type="video/webm">
+            </video>
+        </div>
+        <section class=text>
+            <p><i>Bit Buy Bit </i> is a bitcoin virtual wallet that let's you invest using bitcoins as well as buy and sell in a bitcoin marketplace. It includes a robust portfolio manager to ensure that your money goes where it needs to, when it needs to.
+            </p>
+        </section>
+        <section class="buttones">
+            <a class="waves-effect waves-light indigo lighten-3 btn modal-trigger" href= "#signup-modal">Get Started!</a>
+        </section>
+    </section>
+    <!-- Log in modal bottom -->
+    <div id="modal1" class="modal bottom-sheet">
+        <div class="modal-content">
+          <!--   <h4>Log in.</h4> -->
+            <section class="container">
+                <div class="login">
+                    
+                    <form method="post" action="index.html">
+                        <p>
+                            <input type="text" name="login" value="" placeholder="Username or Email">
+                        </p>
+                        <p>
+                            <input type="password" name="password" value="" placeholder="Password">
+                        </p>
+                        <p class="submit">
+                            <input type="submit" name="commit" value="Login">
+                        </p>
+                    </form>
+                </div>
+                <div class="login-help">
+                    <p class = "modal-close">Forgot your password? <a href="index.html">Click here to reset it</a>.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+            <div id="signup-modal" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                    <h4 class="modalHead">Sign up</h4>
+                    <div class="modalContainer">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="John Doe" type="text" class="validate nameText" id="signup-nameText">
+                                    <label for="name">Name</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="johndoe" type="text" class="validate usernameText" id="signup-usernameText">
+                                    <label for="username">Username</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="123-45-6789" type="text" class="validate ssn" id="signup-ssn">
+                                    <label for="domain">SSN</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="johndoe@gmail.com" type="text" class="validate emailText" id="signup-emailText">
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input placeholder="password" type="password" class="validate pw" id="signup-pw">
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" id="signUpSubmit">Sign Up!</a>
+                </div>
+            </div>
+    <script type="text/JavaScript">
+        $(document).ready(function() { $('.modal-trigger').leanModal(); });
+    </script>
+</body>
+
+</html>

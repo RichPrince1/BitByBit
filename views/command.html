@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Command Center</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../public/assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="https://use.fontawesome.com/af4090585e.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <section class="topNav">
+        <nav>
+            <div class="nav-wrapper black-text">
+                <a href="#" class="brand-logo black-text">BitByBit</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="sass.html" class="black-text port">Portfolio</a></li>
+                    <!--    <li><a href="badges.html">Transactions</a></li> -->
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <div class="container">
+        <section class="card large">
+            <section class="card-content">
+                <section class="balances z-depth-1">
+                    <p class="btc">Btc balance: <span id="btcBalance"></span></p>
+                    <p class="cash">Cash balance:<span id="cashBalace"></span></p>
+                </section>
+                <section class="priceWidget" id="widget">
+                    <div id="hitbtc-ticker" class="hit-big z-depth-2" data-hue="22"></div>
+                    <script type="text/javascript">
+                    (function() {
+                        var po = document.createElement("script");
+                        po.type = "text/javascript";
+                        po.async = true;
+                        po.src = "https://hitbtc.com/get_widget?pair=btcusd";
+                        var s = document.getElementsByTagName("script")[0];
+                        s.parentNode.insertBefore(po, s);
+                    })();
+                    // You can construct widget dynamically by calling hitbtc.widget("myDiv", "big", 22, "btcusd");
+                    </script>
+                </section>
+                <i class="material-icons right switch activator" id="hider">more_vert</i>
+            </section>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Transactions<i class="material-icons right" id = "close">close</i></span>
+                <table>
+                    <thead>
+                        <tr>
+                            <th data-field="id">Name</th>
+                            <th data-field="name">Transaction Title</th>
+                            <th data-field="price">BTC Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alvin</td>
+                            <td>Eclair</td>
+                            <td>$0.87</td>
+                        </tr>
+                        <tr>
+                            <td>Alan</td>
+                            <td>Jellybean</td>
+                            <td>$3.76</td>
+                        </tr>
+                        <tr>
+                            <td>Jonathan</td>
+                            <td>Lollipop</td>
+                            <td>$7.00</td>
+                        </tr>
+                        <tr>
+                            <td>John</td>
+                            <td>Donuts</td>
+                            <td>$4.20</td>
+                        </tr>
+                        <tr>
+                            <td>Enrique</td>
+                            <td>Whiskey</td>
+                            <td>$7.10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript">
+    $("#hider").click(function() {
+        $("#widget").hide();
+    });
+
+    $("#close").click(function() {
+        $("#widget").show();
+    });
+    </script>
+</body>
+
+</html>
